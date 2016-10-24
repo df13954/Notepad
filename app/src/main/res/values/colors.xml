@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--分隔线2列表栏目，小模块分隔线颜色-->
+    <color name="line_list">#dae3e6</color>
+    <color name="white">#ffffffff</color>
+    <color name="auth_left">#333333</color>
+
+</resources>
