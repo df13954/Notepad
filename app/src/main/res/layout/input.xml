@@ -4,8 +4,10 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="12dp"
     android:layout_marginRight="12dp"
+
     android:orientation="vertical">
     <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="12dp"
         android:layout_width="match_parent"
@@ -15,7 +17,7 @@
             android:id="@+id/ed_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="标题"/>
+            android:hint="想记住甚么呢"/>
 
     </android.support.design.widget.TextInputLayout>
 
