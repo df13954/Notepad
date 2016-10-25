@@ -44,9 +44,9 @@ public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.
 
     public void setData(Note data) {
         if (data.getIsCompComplete()) {
-            mMarker.setMarkerDrawable(context.getResources().getDrawable(R.drawable.ic_timeline_compl_marker));
+            mMarker.setMarkerDrawable(context.getResources().getDrawable(R.drawable.comp));
         } else {
-            mMarker.setMarkerDrawable(context.getResources().getDrawable(R.drawable.ic_timeline_default_marker));
+            mMarker.setMarkerDrawable(context.getResources().getDrawable(R.drawable.default1));
 
         }
 
