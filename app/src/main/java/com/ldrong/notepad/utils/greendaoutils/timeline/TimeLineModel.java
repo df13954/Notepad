@@ -1,4 +1,4 @@
-package com.ldrong.notepad;
+package com.ldrong.notepad.utils.greendaoutils.timeline;
 
 /**
  * Created by qiujuer

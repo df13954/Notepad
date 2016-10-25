@@ -1,6 +1,7 @@
 package com.ldrong.notepad.ui.notelist;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,12 +12,12 @@ import android.view.ViewGroup;
 
 import com.apkfuns.logutils.LogUtils;
 import com.ldrong.notepad.R;
-import com.ldrong.notepad.TimeLineAdapter;
 import com.ldrong.notepad.base.AppContext;
 import com.ldrong.notepad.conn.MessageEvent;
 import com.ldrong.notepad.db.Note;
 import com.ldrong.notepad.db.NoteDao;
 import com.ldrong.notepad.ui.notelist.db.NoteHelper;
+import com.ldrong.notepad.utils.greendaoutils.timeline.TimeLineAdapter;
 import com.ldrong.notepad.widget.DialogRadioCallback;
 import com.ldrong.notepad.widget.RadioCustomListDialog;
 import com.ldrong.notepad.widget.RadioListDialogItem;
@@ -91,9 +92,7 @@ public class NoteListFragment extends Fragment {
                     public void DialogRadioClick(RadioListDialogItem item) {
                         LogUtils.e(item.getText());
                         if ("Delete".equals(item.getText())) {
-                            //删除.更新adapter
-                            NoteHelper.deleteNote(note);
-                            adapter.delete(position);
+                           showDeleteDialog(note,position);
                         } else if ("Forget".equals(item.getText())) {
                             note.setIsCompComplete(false);
                             NoteHelper.forget(note);
@@ -142,5 +141,21 @@ public class NoteListFragment extends Fragment {
 
     }
 
+    private void showDeleteDialog(final Note note, final int index) {
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        builder.setTitle("Are you sure？");
+//        builder.setMessage("这是 android.support.v7.app.AlertDialog 中的样式");
+        builder.setNegativeButton("Cancle", null);
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //删除.更新adapter
+                NoteHelper.deleteNote(note);
+                adapter.delete(index);
+
+            }
+        });
+        builder.show();
+    }
 
 }

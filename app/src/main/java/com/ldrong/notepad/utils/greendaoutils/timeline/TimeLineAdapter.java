@@ -1,10 +1,11 @@
-package com.ldrong.notepad;
+package com.ldrong.notepad.utils.greendaoutils.timeline;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ldrong.notepad.R;
 import com.ldrong.notepad.db.Note;
 
 import java.util.List;
