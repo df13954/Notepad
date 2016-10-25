@@ -4,6 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.ldrong.notepad.ui.notelist.NoteListFragment">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="可怕骚年的笔记"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/time_line_recycler"
@@ -17,6 +29,7 @@
         android:overScrollMode="never"
         android:scrollbarSize="2dp"
         android:scrollbarThumbVertical="@color/colorAccent"
+
         android:scrollbars="vertical" />
 
 </LinearLayout>

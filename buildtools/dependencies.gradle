@@ -4,12 +4,12 @@ ext.versions = [
 
         minSdk     : 15,
         targetSdk  : 22,
-        compileSdk : 24,
+        compileSdk : 25,
         buildTools : '24.0.3',
 
         // Library versions 谷歌支持库版本统一控制
         junit      : '4.12',
-        supportLibs: '24.2.1',
+        supportLibs: '25.0.0',
         multidex   : '1.0.1',
 ]
 ext.libs = [

@@ -4,7 +4,7 @@ apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.getkeepsafe.dexcount'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.ldrong.notepad"
@@ -59,6 +59,7 @@ dependencies {
     compile libs.supportV4
     compile libs.supportAppCompat
     compile libs.supportDesign
+    compile libs.supportRecyclerView
     testCompile libs.junit
     //日志
     compile libs.logUtils
