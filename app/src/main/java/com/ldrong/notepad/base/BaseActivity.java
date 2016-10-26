@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
+
 /**
  * @author ldr
  *         created at 2016/10/19 10:59
@@ -119,4 +121,10 @@ public class BaseActivity extends FragmentActivity {
         super.onDestroy();
 //		manager.removeActivity(this);
     }
+
+    public void showToastMsg(String msg) {
+        LogUtils.e(msg);
+        Toast.makeText(mContext, "" + msg, Toast.LENGTH_SHORT).show();
+    }
+
 }
