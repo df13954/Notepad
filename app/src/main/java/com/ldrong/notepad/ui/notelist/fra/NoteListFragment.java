@@ -1,11 +1,13 @@
-package com.ldrong.notepad.ui.notelist;
+package com.ldrong.notepad.ui.notelist.fra;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,6 +82,7 @@ public class NoteListFragment extends Fragment {
 
                 List<RadioListDialogItem> sex = new ArrayList<RadioListDialogItem>();
                 sex.add(new RadioListDialogItem("1", "Delete"));
+                sex.add(new RadioListDialogItem("4", "Edit"));
                 if (note.getIsCompComplete()) {
                     sex.add(new RadioListDialogItem("2", "Forget"));
 
@@ -92,7 +95,7 @@ public class NoteListFragment extends Fragment {
                     public void DialogRadioClick(RadioListDialogItem item) {
                         LogUtils.e(item.getText());
                         if ("Delete".equals(item.getText())) {
-                           showDeleteDialog(note,position);
+                            showDeleteDialog(note, position);
                         } else if ("Forget".equals(item.getText())) {
                             note.setIsCompComplete(false);
                             NoteHelper.forget(note);
@@ -101,6 +104,8 @@ public class NoteListFragment extends Fragment {
                             note.setIsCompComplete(true);
                             NoteHelper.forget(note);
                             adapter.update(position, true);
+                        } else if ("Edit".equals(item.getText())) {
+                            showDialog(note);
                         }
 
                     }
@@ -152,6 +157,47 @@ public class NoteListFragment extends Fragment {
                 //删除.更新adapter
                 NoteHelper.deleteNote(note);
                 adapter.delete(index);
+
+            }
+        });
+        builder.show();
+    }
+
+    /**
+     * 这是兼容的 AlertDialog
+     *
+     * @param note
+     */
+    private void showDialog(final Note note) {
+  /*
+  这里使用了 android.support.v7.app.AlertDialog.Builder
+  可以直接在头部写 import android.support.v7.app.AlertDialog
+  那么下面就可以写成 AlertDialog.Builder
+  */
+        final View view = View.inflate(getContext(), R.layout.input, null);
+        final TextInputEditText et = (TextInputEditText) view.findViewById(R.id.ed_content);
+        et.setText(note.getTitle());
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(getContext());
+        builder.setTitle("此刻的你正在努力^_^");
+//        builder.setMessage("这是 android.support.v7.app.AlertDialog 中的样式");
+        builder.setView(view);
+        builder.setNegativeButton("取消", null);
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                LogUtils.e(et.getText().toString().trim() + "");
+                String str = et.getText().toString().trim() + "";
+                if (TextUtils.isEmpty(str)) {
+
+                } else {
+                    note.setTitle(str);
+                    //note.setTime(DisplayTimeUtil.saveNoteCreateTime(System.currentTimeMillis()) + "");
+                    LogUtils.e(note);
+                    NoteHelper.forget(note);
+                    //插入完成。通知Fragment更新
+                    EventBus.getDefault().post(new MessageEvent.AddNote());
+                }
 
             }
         });

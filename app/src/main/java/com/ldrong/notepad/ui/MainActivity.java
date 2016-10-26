@@ -15,8 +15,8 @@ import com.ldrong.notepad.R;
 import com.ldrong.notepad.base.BaseActivity;
 import com.ldrong.notepad.conn.MessageEvent;
 import com.ldrong.notepad.db.Note;
-import com.ldrong.notepad.ui.notelist.MyFragmentPagerAdapter;
-import com.ldrong.notepad.ui.notelist.NoteListFragment;
+import com.ldrong.notepad.ui.notelist.fra.MyFragmentPagerAdapter;
+import com.ldrong.notepad.ui.notelist.fra.NoteListFragment;
 import com.ldrong.notepad.ui.notelist.db.NoteHelper;
 import com.ldrong.notepad.utils.greendaoutils.time.DisplayTimeUtil;
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ldrong.notepad.ui.notelist.NoteListFragment">
+    tools:context="com.ldrong.notepad.ui.notelist.fra.NoteListFragment">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
