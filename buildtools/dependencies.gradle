@@ -163,6 +163,9 @@ ext.libs = [
 
         //轮播控件
         rollviewpager        : "com.jude:rollviewpager:1.4.5",
+        //轮播
+        xbanner              : "com.xhb:xbanner:1.2.2",
+        nineoldandroids      : "com.nineoldandroids:library:2.4.0",
 
         //load加载小-大图片,我自己的
         lView                : "com.github.rongdongliu:LoadingView:2.0",
