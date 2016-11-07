@@ -105,7 +105,7 @@ public class NoteListFragment extends Fragment {
                             NoteHelper.forget(note);
                             adapter.update(position, true);
                         } else if ("Edit".equals(item.getText())) {
-                            showDialog(note);
+                            showDialog(note,position);
                         }
 
                     }
@@ -167,8 +167,9 @@ public class NoteListFragment extends Fragment {
      * 这是兼容的 AlertDialog
      *
      * @param note
+     * @param position
      */
-    private void showDialog(final Note note) {
+    private void showDialog(final Note note, final int position) {
   /*
   这里使用了 android.support.v7.app.AlertDialog.Builder
   可以直接在头部写 import android.support.v7.app.AlertDialog
@@ -196,7 +197,8 @@ public class NoteListFragment extends Fragment {
                     LogUtils.e(note);
                     NoteHelper.forget(note);
                     //插入完成。通知Fragment更新
-                    EventBus.getDefault().post(new MessageEvent.AddNote());
+                    //EventBus.getDefault().post(new MessageEvent.AddNote());
+                    adapter.notifyItemChanged(position,models);
                 }
 
             }
