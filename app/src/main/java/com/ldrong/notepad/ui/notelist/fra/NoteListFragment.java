@@ -105,7 +105,7 @@ public class NoteListFragment extends Fragment {
                             NoteHelper.forget(note);
                             adapter.update(position, true);
                         } else if ("Edit".equals(item.getText())) {
-                            showDialog(note,position);
+                            showDialog(note, position);
                         }
 
                     }
@@ -197,8 +197,7 @@ public class NoteListFragment extends Fragment {
                     LogUtils.e(note);
                     NoteHelper.forget(note);
                     //插入完成。通知Fragment更新
-                    //EventBus.getDefault().post(new MessageEvent.AddNote());
-                    adapter.notifyItemChanged(position,models);
+                    adapter.notifyItemChanged(position, models);
                 }
 
             }
