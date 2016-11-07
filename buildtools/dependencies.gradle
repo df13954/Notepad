@@ -163,9 +163,11 @@ ext.libs = [
 
         //轮播控件
         rollviewpager        : "com.jude:rollviewpager:1.4.5",
-        //轮播
+        //轮播 此控件发现bug：替换一批图片的时候，导航点会被清空
         xbanner              : "com.xhb:xbanner:1.2.2",
         nineoldandroids      : "com.nineoldandroids:library:2.4.0",
+        //次控件没有动画，目前可用稳定
+        bannerLayout         : "com.github.dongjunkun:BannerLayout:1.0.3",
 
         //load加载小-大图片,我自己的
         lView                : "com.github.rongdongliu:LoadingView:2.0",

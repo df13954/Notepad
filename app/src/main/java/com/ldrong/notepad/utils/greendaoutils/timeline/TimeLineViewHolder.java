@@ -50,7 +50,7 @@ public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.
 
         }
 
-        mName.setText(data.getTime() + " :" + data.getTitle());
+        mName.setText(data.getTime() + "\n" + data.getTitle());
     }
 
     @Override
