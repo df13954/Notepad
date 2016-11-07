@@ -73,6 +73,8 @@ dependencies {
     compile libs.eventbus3
     //检测内存泄漏
     compile libs.leakcanaryDebug
+    //text拼接控件
+    compile libs.textViewUtils
 //    compile libs.leakcanaryRelease
 //    compile libs.leakcanaryTest
 }

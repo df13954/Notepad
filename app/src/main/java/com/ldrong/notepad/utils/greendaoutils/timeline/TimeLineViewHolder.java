@@ -16,9 +16,10 @@ import com.ldrong.notepad.widget.TimeLineMarker;
  * on 15/8/23.
  */
 public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
+    private TextView mTitle;
     private LinearLayout root_View;
     private TimeLineMarker mMarker;
-    private TextView mName;
+    private TextView mTime;
     private Context context;
     private TimeLineAdapter.OnRecyclerViewListener onRecyclerViewListener;
 
@@ -26,7 +27,8 @@ public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.
         super(itemView);
         this.context = itemView.getContext();
         this.onRecyclerViewListener = onRecyclerViewListener;
-        mName = (TextView) itemView.findViewById(R.id.item_time_line_txt);
+        mTime = (TextView) itemView.findViewById(R.id.time);
+        mTitle = (TextView) itemView.findViewById(R.id.title);
         root_View = (LinearLayout) itemView.findViewById(R.id.root_View);
 
         mMarker = (TimeLineMarker) itemView.findViewById(R.id.item_time_line_mark);
@@ -49,8 +51,9 @@ public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.
             mMarker.setMarkerDrawable(context.getResources().getDrawable(R.drawable.default1));
 
         }
+        mTime.setText("" + data.getTime());
+        mTitle.setText("" + data.getTitle());
 
-        mName.setText(data.getTime() + "\n" + data.getTitle());
     }
 
     @Override

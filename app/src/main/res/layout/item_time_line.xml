@@ -25,17 +25,35 @@
         app:marker="@drawable/ic_timeline_default_marker"
         app:markerSize="20dp" />
 
-    <TextView
+    <LinearLayout
         android:id="@+id/item_time_line_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:paddingBottom="16dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="16dp"
-        android:maxLines="3"
-        android:textSize="14sp" />
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="16dp"
+            android:maxLines="3"
+            android:textColor="@color/datetime"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="5dp"
+            android:maxLines="3"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

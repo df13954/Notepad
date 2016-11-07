@@ -7,5 +7,6 @@
     <color name="line_list">#dae3e6</color>
     <color name="white">#ffffffff</color>
     <color name="auth_left">#333333</color>
+    <color name="datetime">#000000</color>
 
 </resources>

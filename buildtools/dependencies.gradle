@@ -197,5 +197,6 @@ ext.libs = [
 //            runOnEachAssemble = true
 //        }
 
+        textViewUtils        : "com.github.iwgang:simplifyspan:1.1",
 ]
 
