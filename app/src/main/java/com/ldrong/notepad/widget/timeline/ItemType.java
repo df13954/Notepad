@@ -1,9 +1,6 @@
-package com.ldrong.notepad.utils.greendaoutils.timeline;
+package com.ldrong.notepad.widget.timeline;
 
-/**
- * Created by qiujuer
- * on 15/8/23.
- */
+
 public class ItemType {
     public final static int NORMAL = 0;
 

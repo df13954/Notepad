@@ -5,7 +5,7 @@ import android.app.Application;
 import com.apkfuns.logutils.LogLevel;
 import com.apkfuns.logutils.LogUtils;
 import com.ldrong.notepad.db.DaoSession;
-import com.ldrong.notepad.utils.greendaoutils.DatabaseManagerImpl;
+import com.ldrong.notepad.greendaonamager.DatabaseManagerImpl;
 
 
 

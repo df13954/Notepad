@@ -1,4 +1,4 @@
-package com.ldrong.notepad.utils.greendaoutils.time;
+package com.ldrong.notepad.utils;
 
 import android.text.TextUtils;
 import android.util.Log;

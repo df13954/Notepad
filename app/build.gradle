@@ -4,8 +4,8 @@ apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'com.getkeepsafe.dexcount'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.ldrong.notepad"
         minSdkVersion 14
@@ -75,6 +75,7 @@ dependencies {
     compile libs.leakcanaryDebug
     //text拼接控件
     compile libs.textViewUtils
+    compile libs.imageLoad
 //    compile libs.leakcanaryRelease
 //    compile libs.leakcanaryTest
 }

@@ -1,4 +1,4 @@
-package com.ldrong.notepad.utils.greendaoutils.timeline;
+package com.ldrong.notepad.widget.timeline;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,10 +11,6 @@ import com.ldrong.notepad.db.Note;
 import com.ldrong.notepad.widget.TimeLineMarker;
 
 
-/**
- * Created by qiujuer
- * on 15/8/23.
- */
 public class TimeLineViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
     private TextView mTitle;
     private LinearLayout root_View;

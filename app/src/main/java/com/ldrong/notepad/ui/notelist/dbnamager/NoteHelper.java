@@ -1,4 +1,4 @@
-package com.ldrong.notepad.ui.notelist.db;
+package com.ldrong.notepad.ui.notelist.dbnamager;
 
 import com.ldrong.notepad.base.AppContext;
 import com.ldrong.notepad.db.Note;

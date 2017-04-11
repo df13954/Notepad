@@ -1,4 +1,4 @@
-package com.ldrong.notepad.utils.greendaoutils.timeline;
+package com.ldrong.notepad.widget.timeline;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +10,7 @@ import com.ldrong.notepad.db.Note;
 
 import java.util.List;
 
-/**
- * Created by qiujuer
- * on 15/8/23.
- */
+
 public class TimeLineAdapter extends RecyclerView.Adapter<TimeLineViewHolder> {
     private List<Note> mDataSet;
 

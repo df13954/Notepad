@@ -1,4 +1,4 @@
-package com.ldrong.notepad.ui.notelist.fra;
+package com.ldrong.notepad.ui.notelist.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

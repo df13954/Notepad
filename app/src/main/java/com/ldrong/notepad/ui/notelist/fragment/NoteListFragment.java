@@ -1,4 +1,4 @@
-package com.ldrong.notepad.ui.notelist.fra;
+package com.ldrong.notepad.ui.notelist.fragment;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,10 +18,10 @@ import com.ldrong.notepad.base.AppContext;
 import com.ldrong.notepad.conn.MessageEvent;
 import com.ldrong.notepad.db.Note;
 import com.ldrong.notepad.db.NoteDao;
-import com.ldrong.notepad.ui.notelist.db.NoteHelper;
-import com.ldrong.notepad.utils.greendaoutils.timeline.TimeLineAdapter;
-import com.ldrong.notepad.widget.DialogRadioCallback;
-import com.ldrong.notepad.widget.RadioCustomListDialog;
+import com.ldrong.notepad.ui.notelist.dbnamager.NoteHelper;
+import com.ldrong.notepad.widget.timeline.TimeLineAdapter;
+import com.ldrong.notepad.widget.timeline.DialogRadioCallback;
+import com.ldrong.notepad.dialog.RadioCustomListDialog;
 import com.ldrong.notepad.widget.RadioListDialogItem;
 
 import org.greenrobot.eventbus.EventBus;

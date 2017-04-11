@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
 
-            android:name=".ui.MainActivity"
+            android:name=".ui.notelist.activity.MainActivity"
             android:label="@string/app_name"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar">

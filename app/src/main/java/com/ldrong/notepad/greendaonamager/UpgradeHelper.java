@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.ldrong.notepad.utils.greendaoutils;
+package com.ldrong.notepad.greendaonamager;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

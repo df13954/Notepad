@@ -1,4 +1,4 @@
-package com.ldrong.notepad.ui;
+package com.ldrong.notepad.ui.notelist.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,10 +15,10 @@ import com.ldrong.notepad.R;
 import com.ldrong.notepad.base.BaseActivity;
 import com.ldrong.notepad.conn.MessageEvent;
 import com.ldrong.notepad.db.Note;
-import com.ldrong.notepad.ui.notelist.fra.MyFragmentPagerAdapter;
-import com.ldrong.notepad.ui.notelist.fra.NoteListFragment;
-import com.ldrong.notepad.ui.notelist.db.NoteHelper;
-import com.ldrong.notepad.utils.greendaoutils.time.DisplayTimeUtil;
+import com.ldrong.notepad.ui.notelist.adapter.MyFragmentPagerAdapter;
+import com.ldrong.notepad.ui.notelist.fragment.NoteListFragment;
+import com.ldrong.notepad.ui.notelist.dbnamager.NoteHelper;
+import com.ldrong.notepad.utils.DisplayTimeUtil;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -105,6 +105,8 @@ public class MainActivity extends BaseActivity {
             }
         });
         builder.show();
+
+
     }
 
 }

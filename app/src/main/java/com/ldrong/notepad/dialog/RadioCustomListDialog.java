@@ -1,4 +1,4 @@
-package com.ldrong.notepad.widget;
+package com.ldrong.notepad.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ldrong.notepad.R;
+import com.ldrong.notepad.widget.RadioListDialogItem;
+import com.ldrong.notepad.widget.timeline.DialogRadioCallback;
 
 import java.util.List;
 
